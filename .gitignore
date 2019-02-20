@@ -3,13 +3,16 @@ db.sqlite3
 media
 
 
+accounts/__pycache__/*
 blog/__pycache__/*
 home/__pycache__/*
 post/__pycache__/*
 
+accounts/migrations/*
 blog/migrations/*
 home/migrations/*
 post/migrations/*
+!accounts/migrations/__init__.py
 !home/migrations/__init__.py
 !post/migrations/__init__.py
 !blog/migrations/__init__.py
