@@ -1,0 +1,16 @@
+.vscode
+db.sqlite3
+media
+
+
+blog/__pycache__/*
+home/__pycache__/*
+post/__pycache__/*
+
+blog/migrations/*
+home/migrations/*
+post/migrations/*
+!home/migrations/__init__.py
+!post/migrations/__init__.py
+!blog/migrations/__init__.py
+staticfiles
