@@ -50,8 +50,10 @@ class Post(models.Model):
 
 class Comment(models.Model):
 
-    post = models.ForeignKey('post.Post', on_delete=models.CASCADE, related_name='comments')
-    name = models.CharField(max_length=200, verbose_name='İsim')
-    content = models.TextField(verbose_name='Yorum')
+    post = models.ForeignKey('post.Post', on_delete=models.CASCADE, related_name='comments', verbose_name='Gönderi')
+    name = models.CharField(max_length=200, verbose_name='Gönderen İsmi')
+    content = models.TextField(verbose_name='Yorum')    
+    created_date = models.DateTimeField(auto_now_add=True, verbose_name="Tarih")
     
-    created_date = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.name
